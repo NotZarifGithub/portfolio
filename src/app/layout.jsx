@@ -1,9 +1,11 @@
 import Footer from '@/components/common/Footer'
 import Navbar from '@/components/common/Navbar'
 import './globals.css'
-import { AR_One_Sans } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 
-const  aos = AR_One_Sans({ subsets: ['latin'] })
+const  roboto = Roboto({ 
+  weight: ['100', '300', '400', '500', '700', '900'],
+  subsets: ['latin'] })
 
 export const metadata = {
   title: 'Begin',
@@ -13,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${aos.className} max-w-[1100px] m-auto `}>
+      <body className={`${roboto.className} max-w-[1100px] m-auto `}>
         <Navbar />
         {children}
         <Footer />
