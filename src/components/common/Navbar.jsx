@@ -29,12 +29,12 @@ const Navbar = () => {
     },
   ]
   return (
-    <section>
-      <div className='flex flex-row gap-5 md:gap-8 lg:gap-12 justify-center items-center p-[20px] md:p-[30px] lg:p-[40px]'>
+    <header>
+      <div className='max-w-[1100px] m-auto flex flex-row gap-5 md:gap-8 lg:gap-12 justify-center items-center p-[20px] md:p-[30px] lg:p-[40px]'>
         {navLinks.map(item =>(
 
           // MAIN CONTENT
-          
+
           <Link 
             key={item.id}
             href={item.link}
@@ -44,7 +44,7 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-    </section>
+    </header>
   )
 }
 

@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} max-w-[1100px] m-auto `}>
+      <body className={`${roboto.className} `}>
         <Navbar />
         {children}
         <Footer />
