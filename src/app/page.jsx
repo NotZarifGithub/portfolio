@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Dela_Gothic_One, Orbitron } from 'next/font/google'
 import { Button } from '@/components/ui/button'
 import { Code2 } from 'lucide-react'
-import { buttonVariants } from "@/components/ui/button"
 
 // FONT FOR MAIN CONTENT
 const DGO = Dela_Gothic_One({
@@ -52,7 +51,7 @@ export default function Home() {
   ]
 
   return (
-    <main className={`h-[calc(100vh-20px)] md:h-[calc(100vh-30px)] lg:h-[calc(100vh-40px)] max-w-[1100px] m-auto px-[30px]`}>
+    <main className={`h-[calc(100vh-60px)] md:h-[calc(100vh-90px)] lg:h-[calc(100vh-110px)] max-w-[1100px] m-auto px-[30px]`}>
       <section>
         <div className='py-[20px]'>
 

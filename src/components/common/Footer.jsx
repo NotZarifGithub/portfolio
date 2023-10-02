@@ -77,14 +77,14 @@ const footer = () => {
             key={item.id}
             className={`flex flex-col py-6 text-center md:text-start md:w-[200px] lg:w-[300px] ${item.id === 2 || item.id === 3 ? "items-center" : ""}`}
           >
-            <h1 className="text-black/60 cursor-default">
+            <h1 className="cursor-default text-black/60">
               {item.title}
             </h1>
             {item.option.map(item => (
               <Link 
                 key={item.id}
                 href={item.href}
-                className="hover:border-b transition-transform border-black"
+                className="transition-transform border-black hover:border-b"
               >
                 {item.title}
               </Link>

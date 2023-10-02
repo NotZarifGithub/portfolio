@@ -14,11 +14,11 @@ const orbitron = Orbitron({
 const ChangingText = ({ text }) => {
 
   // TITLE CAREER
-  const changingTexts = ["Software Engineer", "Full-Stack Developer", "Indie Hacker"];
+  const changingTexts = ["Software Engineer", "Full-Stack Developer", "Indie Hacker", "Web Developer", ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // USING USEEFFECT TO CONSTANTLY CHANGE "TITLE CARRER"
+  // USING USEEFFECT TO LOOP THROUGH THE ARRAY"
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % changingTexts.length);
