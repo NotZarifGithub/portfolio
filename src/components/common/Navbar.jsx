@@ -30,7 +30,7 @@ const Navbar = () => {
   ]
   return (
     <header>
-      <div className='max-w-[1100px] m-auto flex flex-row gap-5 md:gap-8 lg:gap-12 justify-center items-center p-[20px] md:p-[30px] lg:p-[40px]'>
+      <div className='   flex flex-row gap-5 md:gap-8 lg:gap-12 justify-center items-center p-[20px] md:p-[30px] lg:p-[40px]'>
         {navLinks.map(item =>(
 
           // MAIN CONTENT
@@ -38,7 +38,7 @@ const Navbar = () => {
           <Link 
             key={item.id}
             href={item.link}
-            className='capitalize font-semibold text-sm md:text-lg hover:text-lg hover:md:text-2xl transition-all duration-300 ease-in-out hover:border-b-4 border-black'
+            className='text-sm font-semibold capitalize transition-all duration-300 ease-in-out border-black md:text-lg hover:text-lg hover:md:text-2xl hover:border-b-4'
           >
             {item.title}
           </Link>
