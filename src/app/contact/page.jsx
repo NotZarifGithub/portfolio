@@ -1,5 +1,8 @@
+"use client"
+
 import { Dela_Gothic_One, Orbitron } from "next/font/google"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 // FONT FOR MAIN CONTENT
 const DGO = Dela_Gothic_One({
@@ -15,11 +18,19 @@ const orbitron = Orbitron({
 
 const contactPage = () => {
   return (
+    // Wrap the entire page content with a motion.div for page transition
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }} // Adjust the transition duration
+      className={`h-[calc(100vh-60px)] md:h-[calc(100vh-90px)] lg:h-[calc(100vh-110px)] max-w-[1100px] m-auto px-[30px]`}
+    >
+
     <section className={`h-[calc(100vh-60px)] md:h-[calc(100vh-90px)] lg:h-[calc(100vh-110px)] max-w-[1100px] m-auto px-[30px]`}>
       <div className="flex gap-9 flex-col items-center justify-center h-[calc(100vh-60px)] md:h-[calc(100vh-90px)] lg:h-[calc(100vh-110px)]">
 
         {/* MAIN TITLE */}
-
         <div className=''>
           <h1 className={`${DGO.className} text-7xl md:text-[8rem] lg:text-[10rem]`}>
             Get in <span className="pl-[75px] md:pl-[135px]"> touch</span>
@@ -55,6 +66,8 @@ const contactPage = () => {
         </div>
       </div>
     </section>
+
+    </motion.div>
   )
 }
 

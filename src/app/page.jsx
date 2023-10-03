@@ -1,23 +1,26 @@
-import ChangingText from '@/components/feature/ChangingText'
-import Image from 'next/image'
-import { Dela_Gothic_One, Orbitron } from 'next/font/google'
-import { Button } from '@/components/ui/button'
-import { Code2 } from 'lucide-react'
+"use client"
+
+import ChangingText from '@/components/feature/ChangingText';
+import Image from 'next/image';
+import { Dela_Gothic_One, Orbitron } from 'next/font/google';
+import { Button } from '@/components/ui/button';
+import { Code2 } from 'lucide-react';
+import Link from 'next/link';
+import { motion } from 'framer-motion'; // Import Framer Motion
 
 // FONT FOR MAIN CONTENT
 const DGO = Dela_Gothic_One({
   weight: ['400'],
   subsets: ['latin']
-})
+});
 
 // FONT FOR TECH STACK
 const orbitron = Orbitron({
   weight: ['400', '500', '600', '700', '800', '900'],
   subsets: ['latin']
-})
+});
 
-export default function Home() {
-
+const Home = () => {
   // SKILLS DATA
   const skills = [
     {
@@ -48,12 +51,19 @@ export default function Home() {
       id: 7,
       image: '/skills/tailwind.svg',
     },
-  ]
+  ];
 
   return (
-    <main className={`h-[calc(100vh-60px)] md:h-[calc(100vh-90px)] lg:h-[calc(100vh-110px)] max-w-[1100px] m-auto px-[30px]`}>
+    // Wrap the entire page content with a motion.div for page transition
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }} // Adjust the transition duration
+      className={`h-[calc(100vh-60px)] md:h-[calc(100vh-90px)] lg:h-[calc(100vh-110px)] max-w-[1100px] m-auto px-[30px]`}
+    >
       <section>
-        <div className='py-[20px]'>
+        <div className='py-[20px] cursor-default'>
 
           {/* MAIN CONTENT */}
           <div className=''>
@@ -79,7 +89,7 @@ export default function Home() {
         <div className='flex flex-col items-center justify-center sm:py-[20px] md:py-[70px] lg:py-0'>
 
           {/* TECH STACK */}
-          <h1 className={`${orbitron.className} text-base md:text-xl font-semibold text-black/60 pb-[10px] md:pb-[20px]`}>
+          <h1 className={`${orbitron.className} text-base md:text-xl font-semibold text-black/60 pb-[10px] md:pb-[20px]  cursor-default`}>
             Tech Stack
           </h1>
           <div className='flex gap-8 pb-[10px] md:pb-[20px] md:gap-16'>
@@ -123,13 +133,17 @@ export default function Home() {
             size="lg"
             className='px-4 py-2 transition duration-500 ease-in-out border rounded-2xl hover:scale-125'
           >
-            <Code2 
-              className='w-5 h-5 mr-2'
-            />
-              Contact Me
+            <Link href="/contact" className='flex'>
+              <Code2 
+                className='w-5 h-5 mr-2'
+              />
+                Contact Me
+            </Link>
           </Button>
         </div>
       </section>
-    </main>
+    </motion.div>
   )
 }
+
+export default Home;

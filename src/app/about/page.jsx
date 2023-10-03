@@ -1,6 +1,10 @@
+"use client"
+
 import { Orbitron } from "next/font/google"
 import { Button } from '@/components/ui/button'
 import { Code2 } from 'lucide-react'
+import { motion } from "framer-motion"
+import Link from "next/link"
 
 // FONT FOR ABOUT ME TITLE
 const orbitron = Orbitron({
@@ -10,6 +14,15 @@ const orbitron = Orbitron({
 
 const aboutPage = () => {
   return (
+    // Wrap the entire page content with a motion.div for page transition
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }} // Adjust the transition duration
+      className={`h-[calc(100vh-60px)] md:h-[calc(100vh-90px)] lg:h-[calc(100vh-110px)] max-w-[1100px] m-auto px-[30px]`}
+    >
+
     <section className={`h-[calc(100vh-60px)] md:h-[calc(100vh-90px)] lg:h-[calc(100vh-110px)] max-w-[1100px] m-auto px-[30px] flex justify-center items-center`}>
 
       {/* MAIN CONTENT */}
@@ -62,14 +75,18 @@ const aboutPage = () => {
             size="lg"
             className='px-4 py-2 transition duration-500 ease-in-out border rounded-2xl hover:scale-125'
           >
-            <Code2 
-              className='w-5 h-5 mr-2'
-            />
-              Contact Me
+            <Link href="/contact" className='flex'>
+              <Code2 
+                className='w-5 h-5 mr-2'
+              />
+                Contact Me
+            </Link>
           </Button>
         </div>
       </div>
     </section>
+    
+    </motion.div>
   )
 }
 

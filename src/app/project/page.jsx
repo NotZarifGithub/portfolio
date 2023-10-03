@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image";
 import { Orbitron } from "next/font/google";
+import { motion } from "framer-motion";
 
 // FONT FOR ABOUT ME TITLE
 const orbitron = Orbitron({
@@ -49,6 +52,15 @@ const ProjectPage = () => {
   ];
 
   return (
+    // Wrap the entire page content with a motion.div for page transition
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }} // Adjust the transition duration
+      className={`h-[calc(100vh-60px)] md:h-[calc(100vh-90px)] lg:h-[calc(100vh-110px)] max-w-[1100px] m-auto px-[30px]`}
+    >
+
     <section className={` lg:h-[calc(100vh-110px)] m-auto px-[30px]`}>
 
       {/* MAIN CONTENT */}
@@ -73,6 +85,8 @@ const ProjectPage = () => {
         </div>
       </div>
     </section>
+
+    </motion.div>
   );
 };
 
