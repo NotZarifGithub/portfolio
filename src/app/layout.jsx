@@ -3,6 +3,7 @@ import Navbar from '@/components/common/Navbar'
 import './globals.css'
 import { Roboto } from 'next/font/google'
 
+// MAIN FONT
 const  roboto = Roboto({ 
   weight: ['100', '300', '400', '500', '700', '900'],
   subsets: ['latin'] 

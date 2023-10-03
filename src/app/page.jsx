@@ -68,9 +68,7 @@ const Home = () => {
           {/* MAIN CONTENT */}
           <div className=''>
             <h1 className={`${DGO.className} text-7xl md:text-[7rem] lg:text-9xl transition-all duration-500 ease-in-out`}>
-              Zarif
-              Zarif
-              Zarif
+              Zarif&apos; Zarif&apos; Zarif&apos; 
             </h1>
           </div>
 
@@ -78,9 +76,7 @@ const Home = () => {
           <ChangingText />
           <div className=''>
             <h1 className={`${DGO.className} text-7xl md:text-[7rem] lg:text-9xl transition-all duration-500 ease-in-out `}>
-              Zarif
-              Zarif
-              Zarif
+              Zarif&apos; Zarif&apos; Zarif&apos;
             </h1>
           </div>
         </div>

@@ -27,7 +27,7 @@ const ChangingText = ({ text }) => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [changingTexts.length]);
 
   return (
     <section>
