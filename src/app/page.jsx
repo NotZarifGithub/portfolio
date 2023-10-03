@@ -22,31 +22,31 @@ export default function Home() {
   const skills = [
     {
       id: 1,
-      image: '/css-3.svg',
+      image: '/skills/css-3.svg',
     },
     {
       id: 2,
-      image: '/html-5.svg',
+      image: '/skills/html-5.svg',
     },
     {
       id: 3,
-      image: '/js.svg',
+      image: '/skills/js.svg',
     },
     {
       id: 4,
-      image: '/react.svg',
+      image: '/skills/react.svg',
     },
     {
       id: 5,
-      image: '/nextjs.svg',
+      image: '/skills/nextjs.svg',
     },
     {
       id: 6,
-      image: '/sass.svg',
+      image: '/skills/sass.svg',
     },
     {
       id: 7,
-      image: '/tailwind.svg',
+      image: '/skills/tailwind.svg',
     },
   ]
 
